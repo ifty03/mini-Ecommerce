@@ -35,7 +35,7 @@ const handler = NextAuth({
         })
     ],
     pages: {
-        signIn: '/auth/signin',
+        signIn: '/auth/login',
         signUp: '/auth/signup',
     },
     callbacks: {
