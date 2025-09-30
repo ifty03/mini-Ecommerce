@@ -1,6 +1,6 @@
-# Mini E-commerce Dashboard
+# Mini E-commerce for PIMJO
 
-A Next.js e-commerce dashboard application with authentication, built using modern web technologies.
+A Next.js e-commerce application with authentication, built using modern web technologies.
 
 ## 🚀 Technologies Used
 
@@ -128,6 +128,5 @@ For support or questions, feel free to reach out:
 Website: https://ashikul-islam-ifty.vercel.app/
 Email: ashikulislamifty@gmail.com
 Phone: +880 1704070091
----
 
 **Happy Coding! Inshallah we will code together one day PIMJO *(See you soon PIMJO) 🎉**
