@@ -31,9 +31,9 @@ const DashboardPage = () => {
         );
     }
 
-    if (!session) {
-        return null;
-    }
+    // if (!session) {
+    //     return null;
+    // }
 
     return (
         <DashboardLayout activeTab={activeTab} setActiveTab={setActiveTab}>
