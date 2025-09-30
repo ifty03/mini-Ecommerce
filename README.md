@@ -1,6 +1,7 @@
 # Mini E-commerce for PIMJO
 
 A Next.js e-commerce application with authentication, built using modern web technologies.
+Live Link: https://mini-ecommerce-mauve.vercel.app
 
 ## 🚀 Technologies Used
 
