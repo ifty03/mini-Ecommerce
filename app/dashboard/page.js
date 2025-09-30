@@ -8,16 +8,17 @@ import ProductsTable from '../../components/Dashboard/ProductsTable';
 import OrdersTable from '../../components/Dashboard/OrdersTable';
 
 const DashboardPage = () => {
-    const { data: session, status } = useSession();
+    const  { data: session, status } = useSession();
     const router = useRouter();
     const [activeTab, setActiveTab] = useState('overview');
 
-    useEffect(() => {
-        if (status === 'loading') return; // Still loading
-        if (!session) {
-            router.push('/auth/login');
-        }
-    }, [session, status, router]);
+    // useEffect(() => {
+    //     if (status === 'loading') return; // Still loading
+    //     if (!session) {
+    //         router.push('/auth/login');
+    //     }
+    // }, [session, status, router]);
+    console.log(session)
 
     if (status === 'loading') {
         return (
