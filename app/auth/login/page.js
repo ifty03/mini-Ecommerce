@@ -29,13 +29,15 @@ export default function SignIn() {
             const result = await signIn('credentials', {
                 email,
                 password,
-                redirect: false
+                callbackUrl: '/dashboard',
+                redirect: true
             })
 
             if (result?.error) {
                 setError('Invalid email or password')
-            } else {
-                router.push('/')
+            } else if (result?.ok) {
+                router.push('/dashboard')
+                router.refresh()
             }
         } catch (error) {
             setError('Something went wrong')

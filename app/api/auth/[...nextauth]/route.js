@@ -51,6 +51,21 @@ const handler = NextAuth({
             }
             return session
         },
+        async redirect({ url, baseUrl }) {
+            // Redirect to dashboard after sign in
+            if (url === baseUrl) {
+                return `${baseUrl}/dashboard`
+            }
+            // Allows relative callback URLs
+            if (url.startsWith('/')) {
+                return `${baseUrl}${url}`
+            }
+            // Allows callback URLs on the same origin
+            if (new URL(url).origin === baseUrl) {
+                return url
+            }
+            return `${baseUrl}/dashboard`
+        },
     },
     session: {
         strategy: 'jwt',

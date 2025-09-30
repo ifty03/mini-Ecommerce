@@ -73,13 +73,15 @@ export default function SignUp() {
             const result = await signIn('credentials', {
                 email: formData.email,
                 password: formData.password,
-                redirect: false
+                callbackUrl: '/dashboard',
+                redirect: true
             })
 
             if (result?.error) {
                 setError('Account created but failed to sign in')
-            } else {
-                router.push('/')
+            } else if (result?.ok) {
+                router.push('/dashboard')
+                router.refresh()
             }
         } catch (error) {
             setError(error.message)

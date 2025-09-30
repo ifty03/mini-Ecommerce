@@ -12,13 +12,12 @@ const DashboardPage = () => {
     const router = useRouter();
     const [activeTab, setActiveTab] = useState('overview');
 
-    // useEffect(() => {
-    //     if (status === 'loading') return; // Still loading
-    //     if (!session) {
-    //         router.push('/auth/login');
-    //     }
-    // }, [session, status, router]);
-    console.log(session)
+    useEffect(() => {
+        if (status === 'loading') return; // Still loading
+        if (!session) {
+            router.push('/auth/login');
+        }
+    }, [session, status, router]);
 
     if (status === 'loading') {
         return (
@@ -31,9 +30,9 @@ const DashboardPage = () => {
         );
     }
 
-    // if (!session) {
-    //     return null;
-    // }
+    if (!session) {
+        return null;
+    }
 
     return (
         <DashboardLayout activeTab={activeTab} setActiveTab={setActiveTab}>

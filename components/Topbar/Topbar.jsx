@@ -47,7 +47,7 @@ const Topbar = () => {
                 {/* Center - Flash Sale Message */}
                 <div className="flex-1 text-center order-1 md:order-2">
                     <span className="text-sm font-medium">Flash Sale Live - 30% Off Everything</span>
-                    <button className='text-white' onClick={() => signOut()}>log out</button>
+                    {/* <button className='text-white' onClick={() => signOut()}>log out</button> */}
                 </div>
                 {/* Right side - Login/Register */}
                 {session ? <Link href="/dashboard" className='text-white order-3'>Dashboard</Link>: <Link href={`/auth/login`} className=" items-center space-x-1 cursor-pointer hover:opacity-80 hidden md:flex order-3">
